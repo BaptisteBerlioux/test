@@ -14,7 +14,7 @@ using std::endl;
 
 double get_time() {
   struct timeval tv;
-  gettimeofday(&tv, (void *)0);
+  gettimeofday(&tv, (void *));
   return (double) tv.tv_sec + tv.tv_usec*1e-6;
 }
 
@@ -22,9 +22,9 @@ double get_time() {
 int main(int argc, char **argv){   
   int nb, i , j, k;
   double t,start,stop;  
-  vector<vector<double>> matrice_A(SIZE,vector<double> (SIZE,0));
-  vector<vector<double>> matrice_B(SIZE,vector<double> (SIZE,0));
-  vector<vector<double>> matrice_res(SIZE,vector<double> (SIZE,0));
+  vector<vector<double> > matrice_A(SIZE,vector<double> (SIZE,0));
+  vector<vector<double> > matrice_B(SIZE,vector<double> (SIZE,0));
+  vector<vector<double> > matrice_res(SIZE,vector<double> (SIZE,0));
 
 
   for(i = 0; i < SIZE; i++){
